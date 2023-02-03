@@ -1,3 +1,4 @@
+from tkinter import BOTH
 import discord
 import os
 import random
@@ -11,8 +12,8 @@ BOT_PREFIX = ('!')
 
 
 
-channel_name = 'CHANNELNAME'
-token = 'BOT TOKEN'
+channel_name = '881243328715296831'
+token = 'MTA0MjQ0NDk2ODkzMDg1Mjk5NA.GREvFw.VSuKD4ln8pKC-rPjR5ypUkQH9h3cdFiCp_IyT8'
 
 aiml_kernel = aiml.Kernel()
 if os.path.isfile("bot_brain.brn"):
@@ -21,7 +22,7 @@ else:
     aiml_kernel.bootstrap(learnFiles="std-startup.xml", commands="load aiml b")
     aiml_kernel.saveBrain("bot_brain.brn")
 
-bot = commands.Bot(command_prefix=BOT_PREFIX)
+client = discord.Client(intents=discord.Intents.default())
 
 
 
